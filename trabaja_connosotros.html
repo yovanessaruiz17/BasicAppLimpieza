@@ -14,8 +14,8 @@
         </div>
         <nav>
             <ul class="items">
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="trabaja_connosotros.html">CONTACTANOS</a></li>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="trabaja_connosotros.html">Contactanos</a></li>
                 <li><a href="login.html">Login</a></li>
                 <li><a href="registrarse.html">Registrarse</a></li>
             </ul>
@@ -23,12 +23,23 @@
     </header>
     <main class="fondo">
         <div class="fondo1">
-            <h1>Trabaja connosotros</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare urna in laoreet. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. </p>
-            <p>Contacta con nosotros: <a href="mailto:example@example.com">example@example.com</a></p>
-    
+            <div class="containe">
+                <div class="contact-box">
+                    <div class="left"></div>
+                    <form class="right" action="https://formsubmit.co/shellyriios@gmail.com " method="POST">
+                        <h2>Contactanos</h2>
+                        <input type="text" name="nombre" class="field" placeholder="Nombre">
+                        <input type="text" name="email" class="field" placeholder="Email">
+                        <input type="text" name="telefono" class="field" placeholder="Telefono">
+                        <textarea placeholder="Mensaje" name="mensaje" class="field"></textarea>
+                        <button class="btn">Enviar</button>
+                    </form>
+                </div>
+            </div>
         </div>
+        
     </main>
+
 </body>
 <footer>
     <p><a href="./TerminosYCondiciones.html">Terminos y condiciones</a></p>
@@ -36,3 +47,118 @@
     <p><a href="mailto:hege@example.com">yorii@example.com</a></p>
 </footer>
 </html>
+
+<style>
+    *{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Quicksand', sans-serif;
+}
+
+body{
+	height: 100vh;
+	width: 100%;
+}
+
+.containe{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px 100px;
+}
+
+.containe:after{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background: url("../BasicAppLimpieza/limpieza.jpg") no-repeat center;
+	background-size: cover;
+	filter: blur(50px);
+	z-index: -1;
+}
+
+
+.left{
+	background: url("../assets/imagenes-indumentaria/contacto.png") no-repeat center;
+	background-size: cover;
+	height: 100%;
+}
+
+.right{
+	padding: 25px 40px;
+}
+
+h2{
+	position: relative;
+	padding: 0 0 10px;
+	margin-bottom: 10px;
+}
+
+h2:after{
+	content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    height: 4px;
+    width: 50px;
+    border-radius: 2px;
+    background-color: #34c5a1;
+}
+
+.field{
+	width: 100%;
+	border: 2px solid rgba(0, 0, 0, 0);
+	outline: none;
+	background-color: rgba(230, 230, 230, 0.6);
+	padding: 0.5rem 1rem;
+	font-size: 1.1rem;
+	margin-bottom: 22px;
+	transition: .3s;
+}
+
+.field:hover{
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+textarea{
+	min-height: 150px;
+}
+
+.btn{
+	width: 100%;
+	padding: 0.5rem 1rem;
+	background-color: #000000;
+	color: #fff;
+	font-size: 1.1rem;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	transition: .3s;
+}
+
+.btn:hover{
+    background-color: #131817;
+}
+
+.field:focus{
+    border: 2px solid rgba(30,85,250,0.47);
+    background-color: #fff;
+}
+
+@media screen and (max-width: 880px){
+	.contact-box{
+		grid-template-columns: 1fr;
+	}
+	.left{
+		height: 200px;
+	}
+}
+</style>
