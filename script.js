@@ -1,10 +1,10 @@
 function openChat(employeeName) {
     document.getElementById('chatTitle').textContent = 'Chat con ' + employeeName;
-    document.getElementById('chatPopup').style.display = 'block';
+    document.getElementById('chatPopup ').style.display = 'block';
 }
 
 function closeChat() {
-    document.getElementById('chatPopup').style.display = 'none';
+    document.getElementById('chatPopup ').style.display = 'none';
 }
 
 function sendMessage() {
