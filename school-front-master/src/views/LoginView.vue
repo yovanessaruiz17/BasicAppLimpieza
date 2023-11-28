@@ -25,7 +25,8 @@
                 </div>
 
                 <div class="col d-flex justify-content-center">
-                    <img src="../components/icons/IconSchool.png" alt="school">
+                    <img src="../components//icons/logo1.png" alt="school">
+                    
                 </div>
             </div>
         </div>
